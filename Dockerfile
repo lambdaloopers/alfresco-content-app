@@ -8,8 +8,6 @@ RUN mkdir -p ./licenses && \
   yarn licenses list > ./licenses/licenses.txt && \
   yarn licenses generate-disclaimer > ./licenses/disclaimer.txt
 
-RUN npm run build
-
 # 2. Generate image
 
 FROM nginx:stable-alpine
