@@ -1,0 +1,12 @@
+version: '2'
+
+services:
+  node:
+    build:
+      args:
+        - USER_ID=${USER_ID}
+        - GROUP_ID=${GROUP_ID}
+      context: .
+      dockerfile: ./docker/node/Dockerfile
+    volumes:
+      - .:/home/nodejs
